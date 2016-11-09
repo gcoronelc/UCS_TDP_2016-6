@@ -1,0 +1,11 @@
+Desarrollar una aplicación para calcular
+el importe de una venta.
+
+Datos:
+ - Precio    (Incluye el impuesto)
+ - Cantidad
+
+Resultado:
+ - Importe
+ - Impuesto
+ - Total

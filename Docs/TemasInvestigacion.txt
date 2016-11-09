@@ -17,6 +17,7 @@
 6.- Creación de log
 
 7.- JQuery
+    - Roca Ñahui,Richard Edwin
 
 8.- Angular JS
     - Peramas Ceras, Joan Tomas
@@ -24,6 +25,7 @@
     - Galindo Vidal, Camilo
 
 9.- Servicios REST
+    - Balaguer Garcia, Cesar Fernando
 
 10.- Websockets
      - Garcia Chamba, Alexys
@@ -31,6 +33,13 @@
      - Cuesta Barreto, Fernando Giusepi
 
 11.- MyBatis
+
+
+12.- JPA
+     - Candela Sanchez, Raul Antenor
+
+
+
 
 
 
