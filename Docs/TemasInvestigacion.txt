@@ -9,12 +9,14 @@
     - Barrientos Antay,Jennie Yoselin
 
 4.- Patrón Inyección de Dependencias
+    - Astete
 
 5.- Pruebas unitarias
     -  Peñaranda Huerta,Jesús Eduardo
     -  Garnique Narro,Miguel Rodrigo
 
 6.- Creación de log
+    - Aragon
 
 7.- JQuery
     - Roca Ñahui,Richard Edwin
@@ -37,6 +39,12 @@
 
 12.- JPA
      - Candela Sanchez, Raul Antenor
+
+13.- WS SOAP
+
+
+14.- Arquitectura de Software Hexagonal
+
 
 
 
