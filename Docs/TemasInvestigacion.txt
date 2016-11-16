@@ -12,8 +12,6 @@
     - Astete
 
 5.- Pruebas unitarias
-    -  Peñaranda Huerta,Jesús Eduardo
-    -  Garnique Narro,Miguel Rodrigo
 
 6.- Creación de log
     - Aragon
@@ -46,7 +44,12 @@
 14.- Arquitectura de Software Hexagonal
 
 
+15.- Microsoft Azure
+    -  Peñaranda Huerta,Jesús Eduardo
+    -  Garnique Narro,Miguel Rodrigo
 
+
+16.- Desarrollo cloud
 
 
 
