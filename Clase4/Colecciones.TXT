@@ -1,3 +1,21 @@
 ARREGLOS Y COLECCIONES
 =================================
 
+    Caracteristica             Arreglo   Colecciones (Listas)
+-------------------------------------------------------------------
+1.- Tamaño fijo                  SI          NO
+2.- Eliminar elementos           NO          SI
+3.- Añadir nuevos elementos      NO          SI
+-------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
