@@ -9,9 +9,23 @@ import pe.egcc.prestamoapp.view.PrestamoView;
  * @blog www.desarrollasoftware.com
  */
 public class ClasePrincipal {
+  
+  private String nombre = "Gustavo";
 
-  public static void main(String[] args) {
-    PrestamoView.main(args);
+  public ClasePrincipal( String nombre) {
+    this.nombre = nombre;
   }
   
+  public static void main(String[] args) {
+    PrestamoView.main(args);
+//    ClasePrincipal obj = new ClasePrincipal("Gustavo");
+//    obj.mostrar();
+//    
+//    obj = new ClasePrincipal("Claudia");
+//    obj.mostrar();
+  }
+  
+  public void mostrar(){
+    System.out.println(this.nombre);
+  }
 }
