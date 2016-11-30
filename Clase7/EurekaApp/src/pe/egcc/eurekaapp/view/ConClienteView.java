@@ -7,8 +7,7 @@ package pe.egcc.eurekaapp.view;
 
 import javax.swing.JOptionPane;
 import pe.egcc.eureka.model.Cliente;
-import pe.egcc.eureka.service.impl.ClienteServiceImpl;
-import pe.egcc.eureka.service.spec.ClienteServiceSpec;
+import pe.egcc.eurekaapp.controller.ClienteController;
 
 /**
  *
@@ -97,8 +96,8 @@ public class ConClienteView extends javax.swing.JInternalFrame {
       // Dato
       String codigo = txtCodigo.getText();
       // Proceso
-      ClienteServiceSpec clienteService = new ClienteServiceImpl();
-      Cliente bean = clienteService.getCliente(codigo);
+      ClienteController control = new ClienteController();
+      Cliente bean = control.getCliente(codigo);
       if(bean == null){
         throw new Exception("Código " + codigo + " no existe.");
       }

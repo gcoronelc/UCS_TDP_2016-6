@@ -5,6 +5,12 @@
  */
 package pe.egcc.eurekaapp.view;
 
+import java.util.List;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import pe.egcc.eureka.model.Cliente;
+import pe.egcc.eurekaapp.controller.ClienteController;
+
 /**
  *
  * @author Docente
@@ -25,27 +31,173 @@ public class ConClientesView extends javax.swing.JInternalFrame {
   // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
   private void initComponents() {
 
+    jLabel1 = new javax.swing.JLabel();
+    txtPaterno = new javax.swing.JTextField();
+    jLabel2 = new javax.swing.JLabel();
+    txtMaterno = new javax.swing.JTextField();
+    jLabel3 = new javax.swing.JLabel();
+    txtNombre = new javax.swing.JTextField();
+    btnConsultar = new javax.swing.JButton();
+    jScrollPane1 = new javax.swing.JScrollPane();
+    tblDatos = new javax.swing.JTable();
+
     setClosable(true);
     setIconifiable(true);
     setMaximizable(true);
     setResizable(true);
     setTitle("CONSULTAR CLIENTES");
 
+    jLabel1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+    jLabel1.setText("Paterno");
+
+    txtPaterno.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+
+    jLabel2.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+    jLabel2.setText("Materno");
+
+    txtMaterno.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+
+    jLabel3.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+    jLabel3.setText("Nombre");
+
+    txtNombre.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+
+    btnConsultar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+    btnConsultar.setText("Consultar");
+    btnConsultar.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnConsultarActionPerformed(evt);
+      }
+    });
+
+    tblDatos.setModel(new javax.swing.table.DefaultTableModel(
+      new Object [][] {
+        {null, null, null, null, null},
+        {null, null, null, null, null},
+        {null, null, null, null, null},
+        {null, null, null, null, null}
+      },
+      new String [] {
+        "CODIGO", "PATERNO", "MATERNO", "NOMBRE", "DIRECCION"
+      }
+    ) {
+      Class[] types = new Class [] {
+        java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+      };
+      boolean[] canEdit = new boolean [] {
+        false, false, false, false, false
+      };
+
+      public Class getColumnClass(int columnIndex) {
+        return types [columnIndex];
+      }
+
+      public boolean isCellEditable(int rowIndex, int columnIndex) {
+        return canEdit [columnIndex];
+      }
+    });
+    jScrollPane1.setViewportView(tblDatos);
+    if (tblDatos.getColumnModel().getColumnCount() > 0) {
+      tblDatos.getColumnModel().getColumn(0).setResizable(false);
+      tblDatos.getColumnModel().getColumn(1).setResizable(false);
+      tblDatos.getColumnModel().getColumn(2).setResizable(false);
+      tblDatos.getColumnModel().getColumn(3).setResizable(false);
+      tblDatos.getColumnModel().getColumn(4).setResizable(false);
+    }
+
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
     layout.setHorizontalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGap(0, 394, Short.MAX_VALUE)
+      .addGroup(layout.createSequentialGroup()
+        .addGap(9, 9, 9)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 564, Short.MAX_VALUE)
+          .addGroup(layout.createSequentialGroup()
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+              .addComponent(txtPaterno)
+              .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE))
+            .addGap(9, 9, 9)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+              .addComponent(txtMaterno)
+              .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE))
+            .addGap(9, 9, 9)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+              .addComponent(txtNombre)
+              .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(btnConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        .addContainerGap())
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGap(0, 274, Short.MAX_VALUE)
+      .addGroup(layout.createSequentialGroup()
+        .addGap(28, 28, 28)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+          .addGroup(layout.createSequentialGroup()
+            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(1, 1, 1)
+            .addComponent(txtPaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+          .addGroup(layout.createSequentialGroup()
+            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(1, 1, 1)
+            .addComponent(txtMaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+          .addGroup(layout.createSequentialGroup()
+            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(1, 1, 1)
+            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+          .addGroup(layout.createSequentialGroup()
+            .addComponent(btnConsultar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(4, 4, 4)))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(jScrollPane1)
+        .addContainerGap())
     );
 
     pack();
   }// </editor-fold>//GEN-END:initComponents
 
+  private void btnConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarActionPerformed
+    try {
+      // Datos
+      Cliente bean = new Cliente();
+      bean.setPaterno(txtPaterno.getText());
+      bean.setMaterno(txtMaterno.getText());
+      bean.setNombre(txtNombre.getText());
+      // Proceso
+      ClienteController control = new ClienteController();
+      List<Cliente> lista = control.getClientes(bean);
+      // Reporte
+      mostrar(lista);
+    } catch (Exception e) {
+      JOptionPane.showMessageDialog(rootPane, e.getMessage());
+    }
+  }//GEN-LAST:event_btnConsultarActionPerformed
+
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
+  private javax.swing.JButton btnConsultar;
+  private javax.swing.JLabel jLabel1;
+  private javax.swing.JLabel jLabel2;
+  private javax.swing.JLabel jLabel3;
+  private javax.swing.JScrollPane jScrollPane1;
+  private javax.swing.JTable tblDatos;
+  private javax.swing.JTextField txtMaterno;
+  private javax.swing.JTextField txtNombre;
+  private javax.swing.JTextField txtPaterno;
   // End of variables declaration//GEN-END:variables
+
+  private void mostrar(List<Cliente> lista) {
+    // El modelo
+    DefaultTableModel tabla;
+    tabla = (DefaultTableModel) tblDatos.getModel();
+    // Limpiar la tabla
+    tabla.setRowCount(0);
+    // Cargar Datos
+    for (Cliente o : lista) {
+      Object[] rowData = {o.getCodigo(), o.getPaterno(),
+        o.getMaterno(), o.getNombre(), o.getDireccion()};
+      tabla.addRow(rowData);
+    }
+  }
 }

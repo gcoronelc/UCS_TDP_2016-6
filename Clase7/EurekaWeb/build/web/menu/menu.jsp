@@ -2,12 +2,12 @@
   
   <ul>
     
-    <li><a href="#" >Home</a></li>
+    <li><a href="index.jsp" >Home</a></li>
     
-    <li><a href="#" id="current">Products</a>
+    <li><a href="#">Consultas</a>
       <ul>
-        <li><a href="#">Drop Down CSS Menus</a></li>
-        <li><a href="#">Horizontal CSS Menus</a></li>
+        <li><a href="conCliente.jsp">Cliente</a></li>
+        <li><a href="conClientes.jsp">Clientes</a></li>
         <li><a href="#">Vertical CSS Menus</a></li>
         <li><a href="#">Dreamweaver Menus</a></li>
       </ul>
