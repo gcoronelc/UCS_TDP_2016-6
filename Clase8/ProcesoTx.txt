@@ -18,6 +18,8 @@ Flujo Normal
   select dec_cuensaldo, int_cuencontmov
   from cuenta
   where chr_cuencodigo = ?
+  and vch_cuenestado = 'ACTIVO'
+  
   
 - Paso 3: Actualizar cuenta
   update cuenta 
