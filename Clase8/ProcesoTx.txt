@@ -1,0 +1,43 @@
+PROCESO DEPOSITO
+=============================
+
+Datos Necesarios para la Transacción
+------------------------------------
+- Cuenta
+- Importe
+- Codigo empleado
+
+
+Flujo Normal
+----------------------------------
+
+- Paso 1: Inicio de Tx
+  cn.setAutoCommit(false)
+  
+- Paso 2: Leer datos de cuenta
+  select dec_cuensaldo, int_cuencontmov
+  from cuenta
+  where chr_cuencodigo = ?
+  
+- Paso 3: Actualizar cuenta
+  update cuenta 
+  set dec_cuensaldo = ?,
+  int_cuencontmov = ?
+  where chr_cuencodigo = ?
+  
+- Paso 4: Registrar operación
+  insert into movimiento(chr_cuencodigo,
+  int_movinumero, dtt_movifecha,
+  chr_emplcodigo, chr_tipocodigo,
+  dec_moviimporte) 
+  values(?,?,SYSDATE(),?,'003',?)
+
+- Paso 5: Confirmar Tx
+  cn.commit();
+
+
+
+
+
+
+
