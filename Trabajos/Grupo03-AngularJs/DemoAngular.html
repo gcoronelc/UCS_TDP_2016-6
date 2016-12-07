@@ -1,0 +1,100 @@
+<html>
+	<head>
+		<title>MERCADO DE FRUTAS DE LIMA</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+		<link rel="stylesheet" href="reset.css">
+		
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		
+		<link rel="stylesheet" href="misestilos.css">
+		<!-- varia el width para que ocupe el ancho deseado 50% ocupara la mitad -->
+		<style>	
+		  .carousel-inner > .item > img,
+		  .carousel-inner > .item > a > img {
+			  width: 100%;
+			  margin: 0px;
+		  }
+		  	
+		 </style>
+	</head>
+	<body>
+			<nav class="navbar navbar-inverse" role="navigation">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#acolapsar">
+								<span class="sr-only">Toggle Navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							
+						</div>
+						<div class="collapse navbar-collapse" id="acolapsar">
+							<ul class="nav navbar-nav">
+								
+								<li>
+									<a href="index.html">
+									<span class="glyphicon glyphicon-home"></span> Inicio</a>
+								</li>
+								<li><a href="historia.html">Historia</a></li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Frutas de la Costa Peruana<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="costa.html#papaya">Papaya</a></li>
+										<li><a href="costa.html#lucuma">Lúcuma</a></li>
+										<li><a href="costa.html#mandarina">Mandarina</a></li>
+										<li><a href="costa.html#palta">Palta</a></li>
+										<li><a href="costa.html#uva">Uva</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Frutas de la Sierra<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="sierra.html#manzana">Manzana</a></li>
+										<li><a href="sierra.html#naranja">Naranja</a></li>
+										<li><a href="sierra.html#fresa">Fresa</a></li>
+										<li><a href="sierra.html#sandia">Sandía</a></li>
+										<li><a href="sierra.html#melon">Melón</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Frutas de la Selva<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="selva.html#noni">Noni</a></li>
+										<li><a href="selva.html#pitahaya">Pitahaya</a></li>
+										<li><a href="selva.html#aguaje">Aguaje</a></li>
+										<li><a href="selva.html#camu">Camu Camu</a></li>
+										<li><a href="selva.html#cocona">Cocona</a></li>
+									</ul>
+								</li>
+								<li><a href="contacto.html">CONTÁCTENOS</a></li>
+								
+								
+								
+							</ul>
+						</div>
+					</div>
+				</nav>
+				
+		
+				
+				<!--Cuerpo-->
+				<div>		
+					<h1><p>Hola... bienvenido a la demo de AngularJs</p></h1>
+					<h2><p>Escribe aquí tu nombre: <input type="text" maxlength="15" size="15"></p></h2>
+					<h2><p>Escribe aquí el color: <input type="text" maxlength="15" size="15"></p></h2>
+					<h3>Escoger entre: info - success - danger - warning</h3>
+					<br>
+					<h1 class="text-danger">HOLA! </h1>
+				</div>
+				<!--Cuerpo-->
+			
+		<script>
+			$('.carousel').carousel({
+				interval:5000
+			})
+		</script>		
+	</body>
